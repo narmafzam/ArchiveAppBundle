@@ -6,7 +6,7 @@
  * Time: 1:46 PM
  */
 
-namespace AppBundle\Entity\Traits;
+namespace AppBundle\Model\Entity\Traits;
 
 
 trait IdTrait

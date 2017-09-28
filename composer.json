@@ -1,7 +1,26 @@
 {
-    "name": "peyman/archive-system",
+    "name": "narmafzam/archive",
+    "description": "Archive system",
     "license": "proprietary",
     "type": "project",
+    "authors": [
+        {
+            "name": "Farshad Asgharzade",
+            "email": "farshad@narmafzam.com"
+        },
+        {
+            "name": "Morteza Farhadi",
+            "email": "morteza@narmafzam.com"
+        },
+        {
+            "name": "Mohamad Mazraeshahi",
+            "email": "mohamad@narmafzam.com"
+        },
+        {
+            "name": "Peyman Mohamadpour",
+            "email": "peyman@narmafzam.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "AppBundle\\": "src/AppBundle"
@@ -21,6 +40,7 @@
     },
     "require": {
         "php": ">=5.5.9",
+        "doctrine/common": "3.0.0",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
         "incenteev/composer-parameter-handler": "^2.0",
@@ -55,6 +75,7 @@
     "config": {
         "sort-packages": true
     },
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-bin-dir": "bin",

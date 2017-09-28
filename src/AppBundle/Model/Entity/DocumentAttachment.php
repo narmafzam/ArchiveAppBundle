@@ -6,7 +6,7 @@
  * Time: 1:01 PM
  */
 
-namespace AppBundle\Entity;
+namespace AppBundle\Model\Entity;
 
 
 use AppBundle\Entity\Traits\AttachmentTrait;

@@ -6,7 +6,7 @@
  * Time: 1:28 PM
  */
 
-namespace AppBundle\Entity\Traits;
+namespace AppBundle\Model\Entity\Traits;
 
 use Symfony\Component\Validator\constraints as Assert;
 
