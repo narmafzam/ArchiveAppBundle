@@ -9,8 +9,8 @@
 namespace AppBundle\Model\Entity;
 
 
-use AppBundle\Entity\Traits\IdTrait;
-use AppBundle\Entity\Traits\TimestampableTrait;
+use AppBundle\Model\Entity\Traits\IdTrait;
+use AppBundle\Model\Entity\Traits\TimestampableTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -27,7 +27,7 @@ class DocumentNote
      */
     private $body;
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Document", inversedBy="notes")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\Document", inversedBy="notes")
      */
     private $document;
 

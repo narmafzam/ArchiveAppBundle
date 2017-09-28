@@ -8,11 +8,11 @@
 
 namespace AppBundle\Model\Entity;
 
-use AppBundle\Entity\Traits\DescriptionTrait;
-use AppBundle\Entity\Traits\IdTrait;
-use AppBundle\Entity\Traits\SubjectTrait;
-use AppBundle\Entity\Traits\TimestampableTrait;
-use AppBundle\Entity\Traits\TitleTrait;
+use AppBundle\Model\Entity\Traits\DescriptionTrait;
+use AppBundle\Model\Entity\Traits\IdTrait;
+use AppBundle\Model\Entity\Traits\SubjectTrait;
+use AppBundle\Model\Entity\Traits\TimestampableTrait;
+use AppBundle\Model\Entity\Traits\TitleTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -29,17 +29,17 @@ class Document
     use SubjectTrait;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\DocumentType", inversedBy="documents")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\DocumentType", inversedBy="documents")
      */
     private $type;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\DocumentAttachment", mappedBy="document")
+     * @ORM\OneToMany(targetEntity="AppBundle\Model\Entity\DocumentAttachment", mappedBy="document")
      */
     private $attachments;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\DocumentNote", mappedBy="document")
+     * @ORM\OneToMany(targetEntity="AppBundle\Model\Entity\DocumentNote", mappedBy="document")
      */
     private $notes;
 

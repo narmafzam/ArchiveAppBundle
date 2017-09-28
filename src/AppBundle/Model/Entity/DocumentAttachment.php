@@ -9,9 +9,9 @@
 namespace AppBundle\Model\Entity;
 
 
-use AppBundle\Entity\Traits\AttachmentTrait;
-use AppBundle\Entity\Traits\IdTrait;
-use AppBundle\Entity\Traits\TitleTrait;
+use AppBundle\Model\Entity\Traits\AttachmentTrait;
+use AppBundle\Model\Entity\Traits\IdTrait;
+use AppBundle\Model\Entity\Traits\TitleTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,7 +25,7 @@ class DocumentAttachment
     use AttachmentTrait;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Document", inversedBy="attachments")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\Document", inversedBy="attachments")
      */
     private $document;
 

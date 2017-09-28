@@ -9,8 +9,8 @@
 namespace AppBundle\Model\Entity;
 
 
-use AppBundle\Entity\Traits\IdTrait;
-use AppBundle\Entity\Traits\TitleTrait;
+use AppBundle\Model\Entity\Traits\IdTrait;
+use AppBundle\Model\Entity\Traits\TitleTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,7 +23,7 @@ class DocumentType
     use TitleTrait;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Document", mappedBy="type")
+     * @ORM\OneToMany(targetEntity="AppBundle\Model\Entity\Document", mappedBy="type")
      */
     private $documents;
 
