@@ -19,7 +19,7 @@ trait IdTrait
     private $id;
 
     /**
-     * @return mixed
+     * @return integer
      */
     public function getId()
     {

@@ -8,14 +8,14 @@
 
 namespace AppBundle\Model\Entity\Traits;
 
-
 use Doctrine\ORM\Mapping as ORM;
 
 trait TimestampableTrait
 {
     /**
      * @ORM\Column(type="datetime")
-     */private $createdAt;
+     */
+    private $createdAt;
 
     /**
      * @ORM\Column(type="datetime")

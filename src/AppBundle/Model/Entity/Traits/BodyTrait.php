@@ -17,7 +17,7 @@ trait BodyTrait
     private $body;
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getBody()
     {
@@ -25,7 +25,7 @@ trait BodyTrait
     }
 
     /**
-     * @param mixed $body
+     * @param string $body
      */
     public function setBody($body)
     {

@@ -8,17 +8,17 @@
 
 namespace AppBundle\Model\Entity\Traits;
 
-
 use Doctrine\ORM\Mapping as ORM;
 
 trait SubjectTrait
 {
     /**
      * @ORM\Column(type="string")
-     */private $subject;
+     */
+    private $subject;
 
     /**
-     * @return mixed
+     * @return static
      */
     public function getSubject()
     {
@@ -26,7 +26,7 @@ trait SubjectTrait
     }
 
     /**
-     * @param mixed $subject
+     * @param string $subject
      */
     public function setSubject($subject)
     {

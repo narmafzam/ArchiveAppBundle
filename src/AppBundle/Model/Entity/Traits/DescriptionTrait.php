@@ -15,10 +15,11 @@ trait DescriptionTrait
 {
     /**
      * @ORM\Column(type="text")
-     */private $description;
+     */
+    private $description;
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDescription()
     {
@@ -26,7 +27,7 @@ trait DescriptionTrait
     }
 
     /**
-     * @param mixed $description
+     * @param string $description
      */
     public function setDescription($description)
     {

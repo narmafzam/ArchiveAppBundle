@@ -8,17 +8,17 @@
 
 namespace AppBundle\Model\Entity\Traits;
 
-
 use Doctrine\ORM\Mapping as ORM;
 
 trait TitleTrait
 {
     /**
      * @ORM\Column(type="string")
-     */private $title;
+     */
+    private $title;
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getTitle()
     {
@@ -26,7 +26,7 @@ trait TitleTrait
     }
 
     /**
-     * @param mixed $title
+     * @param string $title
      */
     public function setTitle($title)
     {

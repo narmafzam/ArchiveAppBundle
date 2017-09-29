@@ -30,7 +30,7 @@ class DocumentAttachment
     private $document;
 
     /**
-     * @return mixed
+     * @return Document
      */
     public function getDocument()
     {
@@ -38,9 +38,9 @@ class DocumentAttachment
     }
 
     /**
-     * @param mixed $document
+     * @param Document $document
      */
-    public function setDocument($document)
+    public function setDocument(Document $document)
     {
         $this->document = $document;
     }

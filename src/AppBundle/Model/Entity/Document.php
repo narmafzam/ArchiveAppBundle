@@ -8,6 +8,7 @@
 
 namespace AppBundle\Model\Entity;
 
+use AppBundle\Model\Entity\Traits\DeletedTrait;
 use AppBundle\Model\Entity\Traits\DescriptionTrait;
 use AppBundle\Model\Entity\Traits\IdTrait;
 use AppBundle\Model\Entity\Traits\SubjectTrait;
@@ -27,6 +28,7 @@ class Document
     use TimestampableTrait;
     use DescriptionTrait;
     use SubjectTrait;
+    use DeletedTrait;
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\DocumentType", inversedBy="documents")
@@ -42,11 +44,6 @@ class Document
      * @ORM\OneToMany(targetEntity="AppBundle\Model\Entity\DocumentNote", mappedBy="document")
      */
     private $notes;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $deleted;
 
     /**
      * Document constructor.
@@ -103,22 +100,6 @@ class Document
     public function addNote(DocumentNote $note)
     {
         $this->notes->add($note);
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getDeleted()
-    {
-        return $this->deleted;
-    }
-
-    /**
-     * @param boolean $deleted
-     */
-    public function setDeleted($deleted)
-    {
-        $this->deleted = $deleted;
     }
 
 }
