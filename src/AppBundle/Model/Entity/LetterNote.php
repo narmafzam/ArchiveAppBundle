@@ -1,7 +1,7 @@
 <?php
 /**
  * This file is part of archive.
- * Created by: Fenjoon (Farzam Webnegar Sivan Co.), info@fenjoon.net
+ * Copyrighted by Narmafzam (Farzam Webnegar Sivan Co.), info@narmafzam.com
  * Date: 2017/9/29
  */
 namespace AppBundle\Model\Entity;
