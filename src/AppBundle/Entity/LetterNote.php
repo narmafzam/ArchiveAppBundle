@@ -4,11 +4,11 @@
  * Copyrighted by Narmafzam (Farzam Webnegar Sivan Co.), info@narmafzam.com
  * Date: 2017/9/29
  */
-namespace AppBundle\Model\Entity;
+namespace AppBundle\Entity;
 
-use AppBundle\Model\Entity\Traits\BodyTrait;
-use AppBundle\Model\Entity\Traits\IdTrait;
-use AppBundle\Model\Entity\Traits\TimestampableTrait;
+use AppBundle\Entity\Traits\BodyTrait;
+use AppBundle\Entity\Traits\IdTrait;
+use AppBundle\Entity\Traits\TimestampableTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,7 +22,7 @@ class LetterNote
     use TimestampableTrait;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\Letter", inversedBy="notes")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Letter", inversedBy="notes")
      */
     private $letter;
 

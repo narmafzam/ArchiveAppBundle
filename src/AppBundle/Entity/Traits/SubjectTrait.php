@@ -6,31 +6,31 @@
  * Date: 2017/9/26
  */
 
-namespace AppBundle\Model\Entity\Traits;
+namespace AppBundle\Entity\Traits;
 
 use Doctrine\ORM\Mapping as ORM;
 
-trait TitleTrait
+trait SubjectTrait
 {
     /**
      * @ORM\Column(type="string")
      */
-    private $title;
+    private $subject;
 
     /**
-     * @return string
+     * @return static
      */
-    public function getTitle()
+    public function getSubject()
     {
-        return $this->title;
+        return $this->subject;
     }
 
     /**
-     * @param string $title
+     * @param string $subject
      */
-    public function setTitle($title)
+    public function setSubject($subject)
     {
-        $this->title = $title;
+        $this->subject = $subject;
     }
 
 }

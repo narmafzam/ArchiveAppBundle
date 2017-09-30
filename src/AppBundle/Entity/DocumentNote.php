@@ -6,25 +6,25 @@
  * Date: 2017/9/26
  */
 
-namespace AppBundle\Model\Entity;
+namespace AppBundle\Entity;
 
-use AppBundle\Model\Entity\Traits\AttachmentTrait;
-use AppBundle\Model\Entity\Traits\IdTrait;
-use AppBundle\Model\Entity\Traits\TitleTrait;
+use AppBundle\Entity\Traits\BodyTrait;
+use AppBundle\Entity\Traits\IdTrait;
+use AppBundle\Entity\Traits\TimestampableTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="document_attachment")
+ * @ORM\Table(name="document_note")
  */
-class DocumentAttachment
+class DocumentNote
 {
     use IdTrait;
-    use TitleTrait;
-    use AttachmentTrait;
+    use BodyTrait;
+    use TimestampableTrait;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\Document", inversedBy="attachments")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Document", inversedBy="notes")
      */
     private $document;
 
@@ -39,7 +39,7 @@ class DocumentAttachment
     /**
      * @param Document $document
      */
-    public function setDocument(Document $document)
+    public function setDocument($document)
     {
         $this->document = $document;
     }

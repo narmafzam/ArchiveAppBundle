@@ -5,11 +5,11 @@
  * Created by peyman
  * Date: 2017/9/30
  */
-namespace AppBundle\Model\Entity;
+namespace AppBundle\Entity;
 
-use AppBundle\Model\Entity\Traits\BodyTrait;
-use AppBundle\Model\Entity\Traits\IdTrait;
-use AppBundle\Model\Entity\Traits\TimestampableTrait;
+use AppBundle\Entity\Traits\BodyTrait;
+use AppBundle\Entity\Traits\IdTrait;
+use AppBundle\Entity\Traits\TimestampableTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,7 +23,7 @@ class ContractNote
     use TimestampableTrait;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\Contract", inversedBy="ntoes")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Contract", inversedBy="ntoes")
      */
     private $contract;
 

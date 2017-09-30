@@ -5,42 +5,42 @@
  * Date: 2017/9/29
  */
 
-namespace AppBundle\Model\Entity;
+namespace AppBundle\Entity;
 
-use AppBundle\Model\Entity\Traits\DeletedTrait;
-use AppBundle\Model\Entity\Traits\DescriptionTrait;
-use AppBundle\Model\Entity\Traits\IdTrait;
-use AppBundle\Model\Entity\Traits\SubjectTrait;
-use AppBundle\Model\Entity\Traits\TimestampableTrait;
-use AppBundle\Model\Entity\Traits\TitleTrait;
+use AppBundle\Entity\Traits\DeletedTrait;
+use AppBundle\Entity\Traits\DescriptionTrait;
+use AppBundle\Entity\Traits\IdTrait;
+use AppBundle\Entity\Traits\SubjectTrait;
+use AppBundle\Entity\Traits\TimestampableTrait;
+use AppBundle\Entity\Traits\TitleTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="contract")
+ * @ORM\Table(name="letter")
  */
-class Contract
+class Letter
 {
     use IdTrait;
     use TitleTrait;
     use DescriptionTrait;
     use SubjectTrait;
-    use DeletedTrait;
     use TimestampableTrait;
+    use DeletedTrait;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Model\Entity\ContractAttachment", mappedBy="contract")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\LetterAttachment", mappedBy="letter")
      */
     private $attachments;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Model\Entity\ContractNote", mappedBy="contract")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\LetterNote", mappedBy="letter")
      */
     private $notes;
 
     /**
-     * Contract constructor.
+     * Letter constructor.
      */
     public function __construct()
     {
@@ -57,9 +57,9 @@ class Contract
     }
 
     /**
-     * @param ContractAttachment $attachment
+     * @param LetterAttachment $attachment
      */
-    public function addAttachment(ContractAttachment $attachment)
+    public function addAttachment(LetterAttachment $attachment)
     {
         $this->attachments->add($attachment);
     }
@@ -73,9 +73,9 @@ class Contract
     }
 
     /**
-     * @param ContractNote $note
+     * @param LetterNote $note
      */
-    public function addNote(ContractNote $note)
+    public function addNote(LetterNote $note)
     {
         $this->notes->add($note);
     }

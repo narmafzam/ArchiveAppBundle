@@ -5,11 +5,11 @@
  * Date: 2017/9/29
  */
 
-namespace AppBundle\Model\Entity;
+namespace AppBundle\Entity;
 
-use AppBundle\Model\Entity\Traits\AttachmentTrait;
-use AppBundle\Model\Entity\Traits\IdTrait;
-use AppBundle\Model\Entity\Traits\TitleTrait;
+use AppBundle\Entity\Traits\AttachmentTrait;
+use AppBundle\Entity\Traits\IdTrait;
+use AppBundle\Entity\Traits\TitleTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,7 +23,7 @@ class LetterAttachment
     use AttachmentTrait;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Model\Entity\Letter", inversedBy="attachments")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Letter", inversedBy="attachments")
      */
     private $letter;
 

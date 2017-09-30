@@ -5,7 +5,7 @@
  * Date: 2017/9/29
  */
 
-namespace AppBundle\Model\Entity\Traits;
+namespace AppBundle\Entity\Traits;
 
 use Doctrine\ORM\Mapping as ORM;
 
