@@ -6,7 +6,7 @@
  * Date: 2017/9/26
  */
 
-namespace AppBundle\Model\Entity\Traits;
+namespace AppBundle\Entity\Traits;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
