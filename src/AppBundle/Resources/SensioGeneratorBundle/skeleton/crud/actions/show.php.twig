@@ -1,0 +1,12 @@
+{% extends "skeleton/crud/actions/show.php.twig" %}
+
+{% set bundle_short_name = bundle|replace({'Bundle':''})|capitalize %}
+
+{% block method_return %}
+    return $this->render('@{{ bundle_short_name }}/{{ entity|lower|replace({'\\': '/'}) }}/show.html.twig', array(
+    '{{ entity_singularized }}' => ${{ entity_singularized }},
+    {% if 'delete' in actions %}
+        'delete_form' => $deleteForm->createView(),
+    {% endif %}
+    ));
+{% endblock method_return %}
