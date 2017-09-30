@@ -1,13 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: peyman
- * Date: 9/26/17
- * Time: 12:54 PM
+ * This file is part of archive.
+ * Copyrighted by Narmafzam (Farzam Webnegar Sivan Co.), info@narmafzam.com
+ * Created by peyman
+ * Date: 2017/9/26
  */
 
 namespace AppBundle\Model\Entity;
-
 
 use AppBundle\Model\Entity\Traits\IdTrait;
 use AppBundle\Model\Entity\Traits\TitleTrait;
