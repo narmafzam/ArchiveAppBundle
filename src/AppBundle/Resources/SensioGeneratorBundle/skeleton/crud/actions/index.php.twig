@@ -1,9 +1,0 @@
-{% extends "skeleton/crud/actions/new.php.twig" %}
-
-{% set bundle_short_name = bundle|replace({'Bundle':''})|capitalize %}
-
-{% block method_return %}
-    return $this->render('@{{ bundle_short_name }}/{{ entity|lower|replace({'\\': '/'}) }}/index.html.twig', array(
-    '{{ entity_pluralized }}' => ${{ entity_pluralized }},
-    ));
-{% endblock method_return %}
