@@ -1,5 +1,5 @@
 {
-    "name": "narmafzam/ArchiveAppBundle",
+    "name": "narmafzam/archive-app-bundle",
     "description": "Application specific bundle, extending the reusable ArchiveBundle system by Narmafzam",
     "license": "proprietary",
     "type": "project",
