@@ -1,6 +1,6 @@
 {
-    "name": "narmafzam/archive",
-    "description": "Archive system",
+    "name": "narmafzam/ArchiveAppBundle",
+    "description": "Application specific bundle, extending the reusable ArchiveBundle system by Narmafzam",
     "license": "proprietary",
     "type": "project",
     "authors": [
@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle"
+            "ArchiveAppBundle\\": "src/ArchiveAppBundle"
         },
         "classmap": [
             "app/AppKernel.php",
