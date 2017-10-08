@@ -1,7 +1,7 @@
 ArchiveAppBundle
-======================================================================
+================
 
-The Narmafzam's ArchiveAppBundle is an application specific bundle, created to extend the core functionality of Narmafzam's ArchiveBundle.
+The Narmafzam's ArchiveAppBundle is an application specific bundle, created to extend the core functionality of Narmafzam's [ArchiveBundle](https://github.com/narmafzam/ArchiveBundle).
 
 The bundle extends and overrides these sections:
 
