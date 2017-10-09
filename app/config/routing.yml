@@ -3,6 +3,12 @@ archive_app:
     type:     annotation
     prefix:   /
 
-app:
-    resource: '@ArchiveAppBundle/Controller/'
+archive_back:
+    resource: '@NarmafzamArchiveBundle/Controller/Back'
     type: annotation
+    prefix: /back
+
+archive_front:
+    resource: '@NarmafzamArchiveBundle/Controller/Front'
+    type: annotation
+    prefix: /

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9d061ebcec5b42f621258bf849702132",
-    "content-hash": "5a474f81431fa4bd533aac793f789a7c",
+    "hash": "2fcf8e4f1077a46b1c75fb9c0d1f9859",
+    "content-hash": "f6ac61a922468dc17c08676ab01a6e24",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1080,12 +1080,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/narmafzam/ArchiveBundle.git",
-                "reference": "b75e8577cba4d1ade3fc7215f1df581892e16144"
+                "reference": "4daf79f25f816c504cfe4e3a96813e6d83b5deb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/narmafzam/ArchiveBundle/zipball/b75e8577cba4d1ade3fc7215f1df581892e16144",
-                "reference": "b75e8577cba4d1ade3fc7215f1df581892e16144",
+                "url": "https://api.github.com/repos/narmafzam/ArchiveBundle/zipball/4daf79f25f816c504cfe4e3a96813e6d83b5deb4",
+                "reference": "4daf79f25f816c504cfe4e3a96813e6d83b5deb4",
                 "shasum": ""
             },
             "require": {
@@ -1103,11 +1103,6 @@
                 "symfony/phpunit-bridge": "^3.0"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Narmafzam\\ArchiveBundle\\": ""
@@ -1132,7 +1127,7 @@
                 }
             ],
             "description": "Reusable archive bundle by Narmafzam",
-            "time": "2017-10-08 20:40:19"
+            "time": "2017-10-09 10:21:23"
         },
         {
             "name": "paragonie/random_compat",
@@ -2383,11 +2378,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "narmafzam/archive-bundle": 20
     },
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.5.9"
