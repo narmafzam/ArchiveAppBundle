@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js"lang="fa" dir="rtl">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}Archive System{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <link rel="stylesheet" href="{{ asset('build/global.css') }}">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/global.css') }}">
+        {% endblock %}
     </head>
     <body>
+        {% include 'nav.html.twig' %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('build/app.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
