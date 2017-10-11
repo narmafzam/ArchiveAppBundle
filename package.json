@@ -1,5 +1,8 @@
 {
   "devDependencies": {
-    "foundation-sites": "^6.4.4-rc1"
+    "@symfony/webpack-encore": "^0.15.1",
+    "foundation-sites": "^6.4.4-rc1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
   }
 }
