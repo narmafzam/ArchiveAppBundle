@@ -75,5 +75,17 @@ narmafzam_archive:
     contract:
         entity: ArchiveAppBundle\Entity\Contract
         form:
-            common:
-                type: ArchiveAppBundle\Form\Common\Contract
+            back: ~
+            front: ~
+
+    document:
+        entity: ArchiveAppBundle\Entity\Document
+        form:
+            back: ~
+            front: ~
+
+    letter:
+        entity: ArchiveAppBundle\Entity\Letter
+        form:
+            back: ~
+            front: ~
