@@ -77,6 +77,11 @@ narmafzam_archive:
         form:
             back: ~
             front: ~
+        attachment:
+            entity: ArchiveAppBundle\Entity\ContractAttachment
+            form:
+                back: ~
+                front: ~
 
     document:
         entity: ArchiveAppBundle\Entity\Document
