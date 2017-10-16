@@ -21,7 +21,7 @@ use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractInterface;
 class Contract extends BaseClass implements ContractInterface
 {
     /**
-     * @ORM\OneToMany(targetEntity="ArchiveAppBundle\Entity\ContractAttachment", mappedBy="contract")
+     * @ORM\OneToMany(targetEntity="ArchiveAppBundle\Entity\ContractAttachment", mappedBy="contract", cascade={"persist", "remove"})
      */
     protected $attachments;
 
@@ -31,7 +31,7 @@ class Contract extends BaseClass implements ContractInterface
     }
 
     /**
-     * @return ArrayCollection
+     * @return ArrayCollection<AttachmentInterface>
      */
     public function getAttachments()
     {
@@ -43,7 +43,7 @@ class Contract extends BaseClass implements ContractInterface
      */
     public function addAttachment(ContractAttachmentInterface $contractAttachment)
     {
-        $this->attachments = $contractAttachment;
+        $this->attachments->add($contractAttachment);
     }
 
     /**
