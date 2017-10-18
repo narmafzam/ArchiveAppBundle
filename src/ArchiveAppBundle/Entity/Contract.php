@@ -11,7 +11,7 @@ namespace ArchiveAppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Contract as BaseClass;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractAttachmentInterface;
+use Narmafzam\ArchiveBundle\Entity\Interfaces\AttachmentInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractInterface;
 
 /**
@@ -21,6 +21,8 @@ use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractInterface;
 class Contract extends BaseClass implements ContractInterface
 {
     /**
+     * @var ArrayCollection
+     *
      * @ORM\OneToMany(targetEntity="ArchiveAppBundle\Entity\ContractAttachment", mappedBy="contract", cascade={"persist", "remove"})
      */
     protected $attachments;
@@ -30,27 +32,19 @@ class Contract extends BaseClass implements ContractInterface
         $this->attachments = new ArrayCollection();
     }
 
-    /**
-     * @return ArrayCollection<AttachmentInterface>
-     */
-    public function getAttachments()
+    public function getAttachments (): ArrayCollection
     {
         return $this->attachments;
     }
 
-    /**
-     * @param ContractAttachmentInterface $contractAttachment
-     */
-    public function addAttachment(ContractAttachmentInterface $contractAttachment)
+    public function addAttachment (AttachmentInterface $attachment)
     {
-        $this->attachments->add($contractAttachment);
+        $this->attachments->add($attachment);
     }
 
-    /**
-     * @param ContractAttachmentInterface $contractAttachment
-     */
-    public function removeAttachment(ContractAttachmentInterface $contractAttachment)
+    public function removeAttachment (AttachmentInterface $attachment)
     {
-        $this->attachments->removeElement($contractAttachment);
+        $this->attachments->removeElement($attachment);
     }
+
 }

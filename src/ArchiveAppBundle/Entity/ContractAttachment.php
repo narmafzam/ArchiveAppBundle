@@ -24,19 +24,14 @@ class ContractAttachment extends BaseClass implements ContractAttachmentInterfac
      */
     protected $contract;
 
-    /**
-     * @return ContractInterface
-     */
-    public function getContract()
+    public function getContract (): ContractInterface
     {
         return $this->contract;
     }
 
-    /**
-     * @param ContractInterface $contract
-     */
-    public function setContract(ContractInterface $contract)
+    public function setContract (ContractInterface $contract)
     {
         $this->contract = $contract;
     }
+
 }
