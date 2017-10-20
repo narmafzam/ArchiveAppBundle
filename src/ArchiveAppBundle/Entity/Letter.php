@@ -10,7 +10,7 @@ namespace ArchiveAppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\AttachmentInterface;
+use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterAttachmentInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterInterface;
 use Narmafzam\ArchiveBundle\Entity\Letter as BaseClass;
 
@@ -37,12 +37,12 @@ class Letter extends BaseClass implements LetterInterface
         return $this->attachments;
     }
 
-    public function addAttachment (AttachmentInterface $attachment)
+    public function addAttachment (LetterAttachmentInterface $attachment)
     {
         $this->attachments->add($attachment);
     }
 
-    public function removeAttachment (AttachmentInterface $attachment)
+    public function removeAttachment (LetterAttachmentInterface $attachment)
     {
         $this->attachments->removeElement($attachment);
     }
