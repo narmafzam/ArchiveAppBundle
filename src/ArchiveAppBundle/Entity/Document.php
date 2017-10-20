@@ -11,7 +11,7 @@ namespace ArchiveAppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Document as BaseClass;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\AttachmentInterface;
+use Narmafzam\ArchiveBundle\Entity\Interfaces\DocumentAttachmentInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\DocumentInterface;
 
 /**
@@ -37,12 +37,12 @@ class Document extends BaseClass implements DocumentInterface
         return $this->attachments;
     }
 
-    public function addAttachment (AttachmentInterface $attachment)
+    public function addAttachment (DocumentAttachmentInterface $attachment)
     {
         $this->attachments->add($attachment);
     }
 
-    public function removeAttachment (AttachmentInterface $attachment)
+    public function removeAttachment (DocumentAttachmentInterface $attachment)
     {
         $this->attachments->removeElement($attachment);
     }
