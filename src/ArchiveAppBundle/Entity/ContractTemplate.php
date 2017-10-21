@@ -13,14 +13,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\ContractTemplate as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractCommonLineInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractTemplateInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\DescriptionInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\TitleInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="contract_template")
  */
-class ContractTemplate extends BaseClass implements ContractTemplateInterface, TitleInterface, DescriptionInterface
+class ContractTemplate extends BaseClass implements ContractTemplateInterface
 {
     /**
      * @ORM\ManyToOne(targetEntity="ArchiveAppBundle\Entity\ContractTemplate", inversedBy="children")

@@ -11,18 +11,15 @@ namespace ArchiveAppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\ContractCommonLine as BaseClass;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\BodyInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractCommonLineInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineKindInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractTemplateInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\DescriptionInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\TitleInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="contract_common_line")
  */
-class ContractCommonLine extends BaseClass implements ContractCommonLineInterface, TitleInterface, BodyInterface, DescriptionInterface
+class ContractCommonLine extends BaseClass implements ContractCommonLineInterface
 {
     /**
      * @ORM\ManyToMany(targetEntity="ArchiveAppBundle\Entity\ContractTemplate", inversedBy="commonLines")

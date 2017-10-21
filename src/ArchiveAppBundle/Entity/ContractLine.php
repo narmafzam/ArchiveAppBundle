@@ -13,14 +13,12 @@ use Narmafzam\ArchiveBundle\Entity\ContractLine as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineKindInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\DescriptionInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\TitleInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="contract_line")
  */
-class ContractLine extends BaseClass implements ContractLineInterface, TitleInterface, DescriptionInterface
+class ContractLine extends BaseClass implements ContractLineInterface
 {
     /**
      * @ORM\ManyToOne(targetEntity="ArchiveAppBundle\Entity\Contract", inversedBy="lines")
