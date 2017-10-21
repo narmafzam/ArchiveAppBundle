@@ -18,7 +18,7 @@ use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractTemplateInterface;
  * @ORM\Entity
  * @ORM\Table(name="contract_template")
  */
-class ContractTemplate extends BaseClass implements ContractTemplateInterface
+class ContractTemplate extends BaseClass
 {
     /**
      * @ORM\ManyToOne(targetEntity="ArchiveAppBundle\Entity\ContractTemplate", inversedBy="children")

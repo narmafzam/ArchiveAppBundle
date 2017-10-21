@@ -10,14 +10,13 @@ namespace ArchiveAppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\DocumentAttachment as BaseClass;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\DocumentAttachmentInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\DocumentInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="document_attachment")
  */
-class DocumentAttachment extends BaseClass implements DocumentAttachmentInterface
+class DocumentAttachment extends BaseClass
 {
     /**
      * @ORM\ManyToOne(targetEntity="ArchiveAppBundle\Entity\Document", inversedBy="attachments")

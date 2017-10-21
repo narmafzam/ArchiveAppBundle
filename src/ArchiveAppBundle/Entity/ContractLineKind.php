@@ -19,7 +19,7 @@ use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineKindInterface;
  * @ORM\Entity
  * @ORM\Table(name="contract_line_kind")
  */
-class ContractLineKind extends BaseClass implements ContractLineKindInterface
+class ContractLineKind extends BaseClass
 {
     /**
      * @ORM\ManyToOne(targetEntity="ArchiveAppBundle\Entity\ContractLineKind", inversedBy="children")

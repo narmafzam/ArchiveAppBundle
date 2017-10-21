@@ -11,14 +11,13 @@ namespace ArchiveAppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\ContractLine as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineKindInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="contract_line")
  */
-class ContractLine extends BaseClass implements ContractLineInterface
+class ContractLine extends BaseClass
 {
     /**
      * @ORM\ManyToOne(targetEntity="ArchiveAppBundle\Entity\Contract", inversedBy="lines")

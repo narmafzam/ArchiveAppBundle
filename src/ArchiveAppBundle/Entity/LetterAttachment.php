@@ -9,7 +9,6 @@
 namespace ArchiveAppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterAttachmentInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterInterface;
 use Narmafzam\ArchiveBundle\Entity\LetterAttachment as BaseClass;
 
@@ -17,7 +16,7 @@ use Narmafzam\ArchiveBundle\Entity\LetterAttachment as BaseClass;
  * @ORM\Entity
  * @ORM\Table(name="letter_attachment")
  */
-class LetterAttachment extends BaseClass implements LetterAttachmentInterface
+class LetterAttachment extends BaseClass
 {
     /**
      * @ORM\ManyToOne(targetEntity="ArchiveAppBundle\Entity\Letter", inversedBy="attachments")

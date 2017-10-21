@@ -11,14 +11,13 @@ namespace ArchiveAppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterAttachmentInterface;
-use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterInterface;
 use Narmafzam\ArchiveBundle\Entity\Letter as BaseClass;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="letter")
  */
-class Letter extends BaseClass implements LetterInterface
+class Letter extends BaseClass
 {
     /**
      * @var ArrayCollection
