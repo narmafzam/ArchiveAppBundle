@@ -82,6 +82,14 @@ narmafzam_archive:
             form:
                 back: ~
                 front: ~
+        common_line:
+            entity: ArchiveAppBundle\Entity\ContractCommonLine
+        line:
+            entity: ArchiveAppBundle\Entity\ContractLine
+        line_kind:
+            entity: ArchiveAppBundle\Entity\ContractLineKind
+        template:
+            entity: ArchiveAppBundle\Entity\ContractTemplate
 
     document:
         entity: ArchiveAppBundle\Entity\Document
