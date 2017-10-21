@@ -1,22 +1,39 @@
-<div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-    <button class="menu-icon" type="button" data-toggle></button>
-    <div class="title-bar-title"></div>
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+    <div class="title-bar-title">Menu</div>
 </div>
 
-<div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+<div class="top-bar" id="responsive-menu">
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
-            <li>
-                <a href="#">One</a>
-                <ul class="menu vertical">
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
+            <li class="menu-text">Archive Bundle</li>
+            <li class="has-submenu">
+                <a href="#">Contract</a>
+                <ul class="submenu menu vertical" data-submenu>
+                    <li><a href="{{ url('front_contract_new') }}">Add</a></li>
+                    <li><a href="{{ url('front_contract_index') }}">List</a></li>
                 </ul>
             </li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
+            <li class="has-submenu">
+                <a href="#">Document</a>
+                <ul class="submenu menu vertical" data-submenu>
+                    <li><a href="{{ url('front_document_new') }}">Add</a></li>
+                    <li><a href="{{ url('front_document_index') }}">List</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Letter</a>
+                <ul class="submenu menu vertical" data-submenu>
+                    <li><a href="{{ url('front_letter_new') }}">Add</a></li>
+                    <li><a href="{{ url('front_letter_index') }}">List</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
         </ul>
     </div>
 </div>
