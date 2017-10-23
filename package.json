@@ -1,7 +1,8 @@
 {
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.15.1",
-    "foundation-sites": "^6.4.4-rc1",
+    "@symfony/webpack-encore": "^0.16.0",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6"
   },
@@ -9,5 +10,8 @@
     "dev": "./node_modules/.bin/encore dev",
     "watch": "./node_modules/.bin/encore dev --watch",
     "prod": "./node_modules/.bin/encore production"
+  },
+  "dependencies": {
+    "bootstrap-rtl": "^3.3.4"
   }
 }

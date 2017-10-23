@@ -1,8 +1,7 @@
 var $ = require('jquery');
 
-window.$ = $;
-window.jQuery = $;
+require('bootstrap-sass');
 
-require('foundation-sites');
-
-$(document).foundation();
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+});
