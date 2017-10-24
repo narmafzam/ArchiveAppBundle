@@ -1,7 +1,2 @@
-archive_app:
-    resource: "@ArchiveAppBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 narmafzam_archive:
     resource: "@NarmafzamArchiveBundle/Resources/config/routing.yml"
