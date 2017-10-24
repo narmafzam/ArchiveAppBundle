@@ -10,7 +10,7 @@ namespace ArchiveAppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Narmafzam\ArchiveBundle\Entity\Document as BaseClass;
+use Narmafzam\ArchiveBundle\Entity\Base\Document as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\DocumentAttachmentInterface;
 
 /**

@@ -11,7 +11,7 @@ namespace ArchiveAppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterAttachmentInterface;
-use Narmafzam\ArchiveBundle\Entity\Letter as BaseClass;
+use Narmafzam\ArchiveBundle\Entity\Base\Letter as BaseClass;
 
 /**
  * @ORM\Entity

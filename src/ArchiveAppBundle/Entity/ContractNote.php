@@ -9,7 +9,7 @@
 namespace ArchiveAppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Narmafzam\ArchiveBundle\Entity\ContractNote as BaseClass;
+use Narmafzam\ArchiveBundle\Entity\Base\ContractNote as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractInterface;
 
 /**

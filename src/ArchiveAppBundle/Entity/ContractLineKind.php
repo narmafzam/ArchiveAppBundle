@@ -10,7 +10,7 @@ namespace ArchiveAppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Narmafzam\ArchiveBundle\Entity\ContractLineKind as BaseClass;
+use Narmafzam\ArchiveBundle\Entity\Base\ContractLineKind as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractCommonLineInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineInterface;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineKindInterface;

@@ -10,7 +10,7 @@ namespace ArchiveAppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\LetterInterface;
-use Narmafzam\ArchiveBundle\Entity\LetterAttachment as BaseClass;
+use Narmafzam\ArchiveBundle\Entity\Base\LetterAttachment as BaseClass;
 
 /**
  * @ORM\Entity
