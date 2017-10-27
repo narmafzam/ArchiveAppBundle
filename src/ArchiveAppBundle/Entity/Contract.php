@@ -9,6 +9,7 @@
 namespace ArchiveAppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Base\Contract as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractAttachmentInterface;
@@ -22,18 +23,22 @@ use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractNoteInterface;
 class Contract extends BaseClass
 {
     /**
-     * @var ArrayCollection
+     * @var Collection
      *
      * @ORM\OneToMany(targetEntity="ArchiveAppBundle\Entity\ContractAttachment", mappedBy="contract", cascade={"persist", "remove"})
      */
     protected $attachments;
 
     /**
+     * @var Collection
+     *
      * @ORM\OneToMany(targetEntity="ArchiveAppBundle\Entity\ContractLine", mappedBy="contract")
      */
     protected $lines;
 
     /**
+     * @var Collection
+     *
      * @ORM\OneToMany(targetEntity="ArchiveAppBundle\Entity\ContractNote", mappedBy="contract")
      */
     protected $notes;
@@ -45,23 +50,23 @@ class Contract extends BaseClass
         $this->notes = new ArrayCollection();
     }
 
-    public function getAttachments (): ArrayCollection
+    public function getAttachments(): Collection
     {
         return $this->attachments;
     }
 
-    public function addAttachment (ContractAttachmentInterface $attachment)
+    public function addAttachment(ContractAttachmentInterface $attachment)
     {
         $this->attachments->add($attachment);
         $attachment->setContract($this);
     }
 
-    public function removeAttachment (ContractAttachmentInterface $attachment)
+    public function removeAttachment(ContractAttachmentInterface $attachment)
     {
         $this->attachments->removeElement($attachment);
     }
 
-    public function getLines(): ArrayCollection
+    public function getLines(): Collection
     {
         return $this->lines;
     }
@@ -77,7 +82,7 @@ class Contract extends BaseClass
         $this->lines->removeElement($line);
     }
 
-    public function getNotes(): ArrayCollection
+    public function getNotes(): Collection
     {
         return $this->notes;
     }

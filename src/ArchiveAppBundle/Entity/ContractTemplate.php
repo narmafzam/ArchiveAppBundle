@@ -9,6 +9,7 @@
 namespace ArchiveAppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Base\ContractTemplate as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractCommonLineInterface;
@@ -51,7 +52,7 @@ class ContractTemplate extends BaseClass
         $this->parent = $parent;
     }
 
-    public function getChildren(): ArrayCollection
+    public function getChildren(): Collection
     {
         return $this->children;
     }
@@ -67,7 +68,7 @@ class ContractTemplate extends BaseClass
         $this->children->removeElement($child);
     }
 
-    public function getCommonLines(): ArrayCollection
+    public function getCommonLines(): Collection
     {
         return $this->commonLines;
     }

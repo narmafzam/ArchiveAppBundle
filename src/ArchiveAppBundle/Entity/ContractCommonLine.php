@@ -9,6 +9,7 @@
 namespace ArchiveAppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Base\ContractCommonLine as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\ContractLineKindInterface;
@@ -35,7 +36,7 @@ class ContractCommonLine extends BaseClass
         $this->templates = new ArrayCollection();
     }
 
-    public function getTemplates(): ArrayCollection
+    public function getTemplates(): Collection
     {
         return $this->templates;
     }

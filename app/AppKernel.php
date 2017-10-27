@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Narmafzam\ArchiveBundle\NarmafzamArchiveBundle(),
             new ArchiveAppBundle\ArchiveAppBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

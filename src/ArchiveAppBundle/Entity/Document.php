@@ -9,6 +9,7 @@
 namespace ArchiveAppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Narmafzam\ArchiveBundle\Entity\Base\Document as BaseClass;
 use Narmafzam\ArchiveBundle\Entity\Interfaces\DocumentAttachmentInterface;
@@ -20,7 +21,7 @@ use Narmafzam\ArchiveBundle\Entity\Interfaces\DocumentAttachmentInterface;
 class Document extends BaseClass
 {
     /**
-     * @var ArrayCollection
+     * @var Collection
      *
      * @ORM\OneToMany(targetEntity="ArchiveAppBundle\Entity\DocumentAttachment", mappedBy="document", cascade={"persist", "remove"})
      */
@@ -31,7 +32,7 @@ class Document extends BaseClass
         $this->attachments = new ArrayCollection();
     }
 
-    public function getAttachments (): ArrayCollection
+    public function getAttachments (): Collection
     {
         return $this->attachments;
     }
