@@ -32,7 +32,10 @@
 
 # Assets and user uploads
 /web/bundles/
-/web/uploads/
+/web/uploads/*
+
+# Assets Build version
+/web/build/*
 
 # PHPUnit
 /app/phpunit.xml
@@ -49,6 +52,3 @@
 
 # Node modules installed by npm
 /node_modules/*
-
-# Assets Build version
-/web/build/*

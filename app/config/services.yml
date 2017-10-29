@@ -5,7 +5,6 @@ parameters:
     knp_menu.renderer.twig.options:
         currentClass: active
 
-
 services:
     # default configuration for services in *this* file
     _defaults:
