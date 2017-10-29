@@ -41,7 +41,8 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     form_themes:
-        - 'bootstrap_3_horizontal_layout.html.twig'
+#        - 'bootstrap_3_horizontal_layout.html.twig'
+        - '@NarmafzamArchive/form/fields.html.twig'
 
 # Doctrine Configuration
 doctrine:

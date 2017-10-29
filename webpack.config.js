@@ -9,7 +9,13 @@ Encore
 
     .cleanupOutputBeforeBuild()
 
-    .autoProvidejQuery()
+//    .autoProvidejQuery()
+
+    .autoProvideVariables({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+    })
 
     // will output as web/build/app.js
     .addEntry('app', './web/assets/js/main.js')
