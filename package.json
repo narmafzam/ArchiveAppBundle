@@ -12,6 +12,7 @@
     "prod": "./node_modules/.bin/encore production"
   },
   "dependencies": {
-    "bootstrap-rtl": "^3.3.4"
+    "bootstrap-rtl": "^3.3.4",
+    "font-awesome": "^4.7.0"
   }
 }
