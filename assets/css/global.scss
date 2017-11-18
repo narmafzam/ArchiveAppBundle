@@ -1,0 +1,12 @@
+@import 'fonts';
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path:"~font-awesome/fonts";
+
+$brand-primary: darken(#428bca, 20%);
+$font-family-base: 'Iran';
+
+@import '../../node_modules/font-awesome/scss/font-awesome';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../node_modules/bootstrap-rtl/dist/css/bootstrap-rtl';
+@import 'custom';
